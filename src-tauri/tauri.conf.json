@@ -59,10 +59,12 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 244,
+        "minHeight": 271,
+        "height": 271,
         "resizable": true,
         "title": "Character Creator",
-        "width": 268
+        "minWidth": 271,
+        "width": 271
       }
     ]
   }
