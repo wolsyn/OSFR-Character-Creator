@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     genderrace.addEventListener('change', function () {
         const genderRaceValue = genderRace.value;
         var extras = document.getElementById('Extras');
-        if (genderRaceValue === '60' || genderRaceValue === '1') {
+        if (genderRaceValue === '60') {
             extras.hidden = true;
-            alert("There is no available Extras for Humans!");
+            alert("There is no available Extras for Human Females!");
             return 0;
         }
         extras.hidden = false;
