@@ -1,10 +1,12 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+mod utils;
 mod database;
 mod customization;
 mod interface;
 
 use std::{io::Write, path::Path, fs::{create_dir_all, File}};
+use utils::*;
 use log::LevelFilter;
 use chrono::Local;
 use env_logger::Builder;
@@ -33,18 +35,19 @@ fn main() {
 
   tauri::Builder::default()
     .invoke_handler(tauri::generate_handler![
-      eye_color,
-      hair_type, 
-      hair_color,
-      model_extras, 
-      facepaint, 
-      new_character,
-      set_genderace,
-      set_facepaint,
-      set_eyes,
-      set_hair,
-      set_skintone,
-      set_extras
+        open_explorer,
+        eye_color,
+        hair_type, 
+        hair_color,
+        model_extras, 
+        facepaint, 
+        new_character,
+        set_genderace,
+        set_facepaint,
+        set_eyes,
+        set_hair,
+        set_skintone,
+        set_extras
       ])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
