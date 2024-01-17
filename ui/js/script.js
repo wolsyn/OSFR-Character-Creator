@@ -184,5 +184,6 @@ createBtn.addEventListener('click', async function () {
     } finally {
         createBtn.disabled = false;
         alert('Character created with success!');
+        invoke('open_explorer');
     }
 });
