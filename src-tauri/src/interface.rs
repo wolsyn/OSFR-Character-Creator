@@ -48,15 +48,15 @@ pub mod database_interface {
 
   #[tauri::command]
   pub fn model_extras(gender: String, species: String) -> Vec<Extras> {
-    let pixie_wings: Vec<Extras> = match get_wings_by_gender_species(DATABASE_PATH, &gender, &species) {
-        Ok(pw) => {pw},
+    let extras: Vec<Extras> = match get_wings_by_gender_species(DATABASE_PATH, &gender, &species) {
+        Ok(ext) => {ext},
         Err(e) => {
           eprintln!("Error while retrieving data from Database file {}, due to {:#?}", DATABASE_PATH, &e);
           error!("Error while retrieving data from Database file {}, due to {:#?}", DATABASE_PATH, &e);
           panic!();
         },
     };
-  pixie_wings
+  extras
 }
 
 #[tauri::command]
