@@ -50,6 +50,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         invoke('model_extras', { gender, species }).then((payload) => {
             const wingsArray = payload;
 
+            if (gender == "m" && species == "human") {
+                var defaultOption = document.createElement('option');
+                defaultOption.value = '';
+                defaultOption.text = 'Clean Shaved';
+                wingsSelect.appendChild(defaultOption);
+            }
+
             wingsArray.forEach(wing => {
                 var option = document.createElement('option');
                 option.value = wing.addr;
