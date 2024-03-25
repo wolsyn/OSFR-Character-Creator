@@ -1,6 +1,6 @@
 # About
 
-This project is a program designed to facilitate the creation of characters for OSFR. It generates a JSON file with the specified parameters for each character.
+This a program designed to facilitate the creation of characters for OSFR. It generates a JSON file with the specified parameters for each character.
 
 # Building
 
@@ -12,9 +12,4 @@ A good method to read the documentation is using the `cargo doc --open` command.
 
 ## Output File
 
-The produced file is saved in the `characters` folder. Please note that the file may not be easily human-readable as it is optimized for machine reading.
-
-## TODO
-
-- [ ] Add the ability to add "Mounts" to characters.
-- [ ] Add the ability to add "Clothes" to characters.
+The produced file is saved in the `characters` folder. Please note that the file is not easily human-readable as it is optimized for machine reading.
